@@ -1,0 +1,183 @@
+Build a complete, working AI-powered web application using a local LLM (Ollama) with a Retrieval-Augmented Generation (RAG) system for PDF-based question answering.
+
+The system must be fully functional WITHOUT any paid APIs.
+
+---
+
+🧠 CORE FUNCTIONALITY:
+
+* User uploads a PDF file
+* System processes and stores it using embeddings
+* User asks questions
+* System retrieves relevant content from the PDF
+* Local LLM (Ollama with Mistral) generates answers ONLY based on retrieved context
+
+---
+
+⚙️ BACKEND REQUIREMENTS:
+Use Python.
+
+Libraries:
+
+* langchain
+* faiss-cpu
+* pypdf
+* sentence-transformers
+
+Core Implementation:
+
+1. Load PDF using PyPDFLoader
+2. Split text using RecursiveCharacterTextSplitter (chunk_size=500, overlap=50)
+3. Generate embeddings using HuggingFaceEmbeddings
+4. Store vectors using FAISS
+5. Implement similarity search for retrieval
+6. Use Ollama (model: mistral) for answer generation
+
+IMPORTANT:
+
+* Do NOT use OpenAI API or any paid APIs
+* Everything must run locally
+* Ensure clean, minimal, working pipeline
+
+Prompt behavior:
+
+* Answer ONLY from provided context
+* If answer not found → respond: "Not found in document"
+
+---
+
+🌐 FRONTEND (VERY IMPORTANT — FOLLOW EXACT DESIGN BELOW)
+
+Build a production-ready, responsive landing page using React, Tailwind CSS v4, and Vite. The design should feature a high-end, dark-mode "glassmorphism" aesthetic with specific purple/pink gradients.
+
+1. Tech Stack & Libraries:
+   Use hls.js for video streaming.
+   Use motion/react (formerly Framer Motion) for animations.
+   Use react-use-measure for sizing logic.
+   Use clsx and tailwind-merge for class management.
+   Use lucide-react for standard icons (if needed).
+
+2. Global Styling:
+   Background: Dark/Black (#010101).
+   Primary Gradient: from-[#FA93FA] via-[#C967E8] to-[#983AD6].
+   Typography: Modern sans-serif, center-aligned hero text.
+
+3. Hero Section Components:
+   Announcement Pill:
+
+* Pill-shaped badge
+* Background: bg-[rgba(28,27,36,0.15)]
+* Subtle border
+* Icon: Zap with gradient glow
+* Text: "Used by founders. Loved by devs."
+
+Main Headline:
+
+* "Your Vision" (line 1)
+* "Our Digital Reality." (line 2)
+* Gradient text (white → purple/pink)
+* Size: 48px → 80px responsive
+
+Subheadline:
+"We turn bold ideas into modern designs that don't just look amazing, they grow your business fast."
+
+CTA Button:
+"Upload PDF & Ask AI"
+
+* Rounded full
+* White background, black text
+* Gradient icon
+
+4. HERO VIDEO:
+
+* Use native <video> + hls.js (NO react-player)
+* HLS Source:
+  https://customer-cbeadsgr09pnsezs.cloudflarestream.com/697945ca6b876878dba3b23fbd2f1561/manifest/video.m3u8
+* Fallback MP4:
+  /_videos/v1/f0c78f536d5f21a047fb7792723a36f9d647daa1
+
+Styling:
+
+* mix-blend-screen
+* Positioned bottom, overlaps hero (-mt-[150px])
+* z-10 video, z-20 text
+* full width, no cropping
+* gradient overlay
+
+5. LOGO CLOUD:
+
+* Infinite horizontal slider using motion/react
+* Glass background
+* Logos white (invert)
+* Include OpenAI, Nvidia, GitHub SVGs
+
+---
+
+📄 APP FUNCTIONAL UI:
+
+Below hero section, add:
+
+1. PDF Upload Section:
+
+* Drag & drop or file upload
+* Show upload success
+
+2. Chat Interface:
+
+* Input box for questions
+* Display answers
+* Clean modern UI (glass style)
+
+---
+
+🔗 BACKEND + FRONTEND INTEGRATION:
+
+* Use FastAPI or Flask backend
+
+* Create endpoints:
+
+  * /upload → process PDF
+  * /ask → query system
+
+* Connect React frontend to backend using fetch/axios
+
+---
+
+📁 PROJECT STRUCTURE:
+
+backend/
+app.py
+
+frontend/
+src/
+App.tsx
+components/
+pages/
+
+---
+
+🚨 IMPORTANT RULES:
+
+* Code MUST run without errors
+* Keep it minimal but functional
+* Do NOT overcomplicate
+* Do NOT use any paid APIs
+* Ensure Ollama integration works locally
+
+---
+
+🎯 GOAL:
+
+Deliver a clean, working, demo-ready AI PDF Q&A web app with:
+
+* Local LLM (Ollama)
+* RAG pipeline (FAISS)
+* Modern frontend UI
+
+---
+
+At the end, provide:
+
+* Full code
+* Setup steps
+* Run instructions (backend + frontend)
