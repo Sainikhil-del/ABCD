@@ -1,10 +1,10 @@
-#  DocuMind AI
+# 🚀 DocuMind AI
 
 DocuMind AI is an intelligent document analysis platform that enables users to upload PDFs and interact with them using natural language queries. It extracts, understands, and delivers precise answers instantly using AI.
 
 ---
 
-1.  Business Problem
+## 1. 🧠 Business Problem
 
 Professionals and students frequently work with large PDF documents such as:
 
@@ -22,7 +22,7 @@ There is a growing need for a system that can **quickly interpret documents and 
 
 ---
 
-2.  Possible Solution
+## 2. 💡 Possible Solution
 
 A smart AI-driven system that:
 
@@ -35,7 +35,7 @@ This significantly reduces manual effort and improves productivity.
 
 ---
 
-3.  Implemented Solution
+## 3. ⚙️ Implemented Solution
 
 DocuMind AI is a full-stack application that:
 
@@ -54,7 +54,7 @@ This ensures:
 
 ---
 
-4.  Tech Stack Used
+## 4. 🛠️ Tech Stack Used
 
 ### Frontend:
 
@@ -75,7 +75,7 @@ This ensures:
 
 ---
 
-5.  Architecture Diagram
+## 5. 🏗️ Architecture Diagram
 
 ```
 User (Next.js Frontend)
@@ -99,7 +99,7 @@ Response → Frontend
 
 ---
 
-6.  How to Run Locally
+## 6. ▶️ How to Run Locally
 
 ### Step 1: Clone Repository
 
@@ -155,7 +155,7 @@ http://localhost:3000
 
 ---
 
-7.  References & Resources Used
+## 7. 📚 References & Resources Used
 
 * FastAPI Documentation
 * LangChain Documentation
@@ -163,10 +163,25 @@ http://localhost:3000
 * FAISS Documentation
 * Ollama Documentation
 * Next.js & React Docs
+---
+
+## 9. 📸 Screenshots
+
+### 🔹 Home Interface
+
+![UI](images/homepage.png)
+
+### 🔹 PDF Upload Flow
+
+![UI](images/fileuploas.png)
+
+### 🔹 AI Answer Output
+
+![UI](images/answe.png)
 
 ---
 
-8.  Formatting & Design
+## 10. 📐 Formatting & Design
 
 * Modern gradient UI
 * Responsive layout
@@ -175,7 +190,7 @@ http://localhost:3000
 
 ---
 
-9.  Challenges Faced & Solutions
+## 11. ⚠️ Challenges Faced & Solutions
 
 ### 🔴 CORS Issues
 
@@ -212,16 +227,18 @@ http://localhost:3000
 
 ---
 
-#  Conclusion
+# 🎯 Conclusion
 
 DocuMind AI demonstrates how modern AI systems can transform document interaction by making information retrieval fast, intuitive, and intelligent.
 
 ---
 
-#  Future Improvements
+# 🚀 Future Improvements
 
 * Cloud deployment (Frontend + Backend)
 * Replace local LLM with scalable API-based models
 * Add chat history & memory
 * Improve performance and UI polish
 * Multi-document support
+
+---
