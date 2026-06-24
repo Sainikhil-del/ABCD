@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://retta-guardant-andera.ngrok-free.dev";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 type AskStatus = "idle" | "loading" | "error";
@@ -57,7 +57,13 @@ export default function Home() {
     setUploadMessage("");
     try {
       console.log("[UPLOAD] Starting:", file.name);
-      const res = await fetch(`${API_BASE}/upload`, { method: "POST", body: formData });
+      const res = await fetch(`${API_BASE}/upload`, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      });
       console.log("[UPLOAD] Status:", res.status);
       if (!res.ok) throw new Error(`Server ${res.status}`);
       const data = await res.json();
@@ -81,7 +87,12 @@ export default function Home() {
     try {
       const url = `${API_BASE}/ask?query=${encodeURIComponent(query.trim())}`;
       console.log("[ASK] Requesting:", url);
-      const res = await fetch(url, { headers: { Accept: "application/json" } });
+      const res = await fetch(url, {
+        headers: {
+          Accept: "application/json",
+          "ngrok-skip-browser-warning": "true",
+        },
+      });
       console.log("[ASK] Status:", res.status);
       if (!res.ok) { const t = await res.text(); throw new Error(`Server ${res.status}: ${t}`); }
       const data = await res.json();
